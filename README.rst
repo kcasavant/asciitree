@@ -3,6 +3,8 @@ ASCII Trees
 
 Occasionally, you want things to look slightly pretty in the terminal. If trees are involved, give asciitree a shot!
 
+Supports Python 2.6+ and Python 3.3.
+
 Sample output
 -------------
 

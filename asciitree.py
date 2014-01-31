@@ -1,10 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-try:
-    from cStringIO import StringIO
-except ImportError:
-    from StringIO import StringIO
+from __future__ import print_function
+import sys
+
+PY2 = sys.version_info[0] == 2
+
+
+if PY2:
+    try:
+        from cStringIO import StringIO
+    except ImportError:
+        from StringIO import StringIO
+else:
+    from io import StringIO
 
 
 def draw_tree(node,
@@ -60,4 +69,4 @@ if __name__ == '__main__':
         ])
     ])
 
-    print draw_tree(root)
+    print(draw_tree(root))
